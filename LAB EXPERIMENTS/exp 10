@@ -1,0 +1,79 @@
+# EXPERIMENT 10 – Git Branching and Merge Conflict Resolution
+
+**Aim:** To demonstrate Git branching and resolve merge conflicts while collaborating with others.
+
+**Procedure:**
+1. Cloned the shared GitHub repository.
+2. Created a new feature branch.
+3. Modified the README file.
+4. Committed and pushed the changes.
+5. Pulled the latest changes from the main branch.
+6. Merged the main branch into the feature branch.
+7. Identified and resolved merge conflicts.
+8. Committed the resolved changes.
+9. Pushed the updated feature branch.
+10. Created a Pull Request on GitHub.
+
+**Conflict encountered:** Changes made to the same section of the README file in different branches.
+
+**Resolution:** Manually edited the conflicting file, retained the required content, removed conflict markers and committed the resolved file.
+
+**Result:** Successfully demonstrated Git branching, merging and conflict resolution using GitHub.
+
+
+
+
+
+s://github.com/Lakshumipriya27/Spoon-Knife.git
+Cloning into 'Spoon-Knife'...
+remote: Enumerating objects: 10, done.
+remote: Total 10 (delta 0), reused 0 (delta 0), pack-reused 10 (from 1)
+Receiving objects: 100% (10/10), done.
+Resolving deltas: 100% (1/1), done.
+PS C:\Users\HP\Downloads\Spoon-Knife-main\Spoon-Knife-main\Spoon-Knife> cd Spoon-Knife
+PS C:\Users\HP\Downloads\Spoon-Knife-main\Spoon-Knife-main\Spoon-Knife\Spoon-Knife> git branch
+PS C:\Users\HP\Downloads\Spoon-Knife-main\Spoon-Knife-main\Spoon-Knife\Spoon-Knife> git checkout -b feature/readme-update
+Switched to a new branch 'feature/readme-update't add README.md
+PS C:\Users\HP\Downloads\Spoon-Knife-main\Spoon-Knife-main\Spoon-Knife\Spoon-Knife> git commit -m "Update README with new feature"
+On branch feature/readme-update
+nothing to commit, working tree clean
+PS C:\Users\HP\Downloads\Spoon-Knife-main\Spoon-Knife-main\Spoon-Knife\Spoon-Knife> git push -u origin feature/readme-update
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'feature/readme-update' on GitHub by visiting:
+remote:      https://github.com/Lakshumipriya27/Spoon-Knife/pull/new/feature/readme-update
+remote: 
+ * [new branch]      feature/readme-update -> feature/readme-update
+branch 'feature/readme-update' set up to track 'origin/feature/readme-update'.
+PS C:\Users\HP\Downloads\Spoon-Knife-main\Spoon-Knife-main\Spoon-Knife\Spoon-Knife> gi
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\HP\Downloads\Spoon-Knife-main\Spoon-Knife-main\Spoon-Knife\Spoon-Knife> git pull origin main
+remote: Enumerating objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+Unpacking objects: 100% (3/3), 1.42 KiB | 85.00 KiB/s, done.
+From https://github.com/Lakshumipriya27/Spoon-Knife
+ * branch            main       -> FETCH_HEAD
+   d0dd1f6..544c5a2  main       -> origin/main
+Updating d0dd1f6..544c5a2
+Fast-forward
+ 1 file changed, 1 insertion(+)
+PS C:\Users\HP\Downloads\Spoon-Knife-main\Spoon-Knife-main\Spoon-Knife\Spoon-Knife> git checkout feature/readme-update
+Switched to branch 'feature/readme-update'
+Your branch is up to date with 'origin/feature/readme-update'.
+PS C:\Users\HP\Downloads\Spoon-Knife-main\Spoon-Knife-main\Spoon-Knife\Spoon-Knife> git merge main
+Updating d0dd1f6..544c5a2
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+PS C:\Users\HP\Downloads\Spoon-Knife-main\Spoon-Knife-main\Spoon-Knife\Spoon-Knife> git add README.md
+PS C:\Users\HP\Downloads\Spoon-Knife-main\Spoon-Knife-main\Spoon-Knife\Spoon-Knife> git commit -m "Resolve merge conflict"
+On branch feature/readme-update
+Your branch is ahead of 'origin/feature/readme-update' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\HP\Downloads\Spoon-Knife-main\Spoon-Knife-main\Spoon-Knife\Spoon-Knife> git push origin feature/readme-update
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Lakshumipriya27/Spoon-Knife.git
+   d0dd1f6..544c5a2  feature/readme-update -> feature/readme-update
